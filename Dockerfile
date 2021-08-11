@@ -42,3 +42,4 @@ ADD ncp.py /tmp/silabs
 ADD *.ebl /tmp/silabs/
 
 CMD /tmp/silabs/update-firmware.sh
+CMD bash
