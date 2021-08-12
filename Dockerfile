@@ -1,9 +1,9 @@
 #FROM ubuntu:20.04 
 FROM python:buster
 
-MAINTAINER Walt Howd <walthowd@gmail.com>
+MAINTAINER Clayton Auld <clayauld@gmail.com>
 
-WORKDIR /tmp/silabs
+WORKDIR /tmp/husbzb-firmware
 
 #RUN apt-get update \
 #  && apt-get install -y git wget python3-pip unzip jq curl python2.7 python2
@@ -42,4 +42,4 @@ ADD ncp.py /tmp/silabs
 ADD *.ebl /tmp/silabs/
 
 CMD /tmp/silabs/update-firmware.sh
-CMD bash
+CMD ["/bin/sh" "-c" "/bin/bash -c 'while sleep 10; do echo Running.......; done'"]
